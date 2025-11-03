@@ -3,12 +3,12 @@ package level2;
 public class ContactFactoryAndorra implements ContactFactory {
 
     @Override
-    public String generatePhoneNumber(String number) {
-        return "";
+    public PhoneNumber getPhoneNumber() {
+        return new PhoneNumberAndorra();
     }
 
     @Override
-    public String generateAddress(String street, int number, String city, String postcode) {
-        return "";
+    public Address getAddress() {
+        return new AddressAndorra();
     }
 }

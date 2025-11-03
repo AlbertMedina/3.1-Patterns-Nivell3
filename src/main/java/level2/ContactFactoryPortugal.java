@@ -1,15 +1,14 @@
 package level2;
 
 public class ContactFactoryPortugal implements ContactFactory {
-    
+
     @Override
-    public String generatePhoneNumber(String number) {
-        return "";
+    public PhoneNumber getPhoneNumber() {
+        return new PhoneNumberPortugal();
     }
 
     @Override
-    public String generateAddress(String street, int number, String city, String postcode) {
-        return "";
+    public Address getAddress() {
+        return new AddressPortugal();
     }
-
 }

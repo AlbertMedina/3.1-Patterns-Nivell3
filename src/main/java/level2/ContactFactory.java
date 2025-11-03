@@ -1,9 +1,8 @@
 package level2;
 
 public interface ContactFactory {
+    
+    PhoneNumber getPhoneNumber();
 
-    String generatePhoneNumber(String number);
-
-    String generateAddress(String street, int number, String city, String postcode);
-
+    Address getAddress();
 }
