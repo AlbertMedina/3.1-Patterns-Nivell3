@@ -2,6 +2,7 @@ package level1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Undo {
 
@@ -21,17 +22,19 @@ public class Undo {
     }
 
     public void addCommand(String command) {
-        if (command != null && !command.trim().isEmpty()) {
-            commands.add(command);
-            System.out.println("'" + command + "' added");
+        if (command == null || command.trim().isEmpty()) {
+            throw new IllegalArgumentException("Invalid command");
         }
+        commands.add(command);
+        System.out.println("'" + command + "' added");
     }
 
     public void removeCommand() {
-        if (!commands.isEmpty()) {
-            String command = commands.removeLast();
-            System.out.println("'" + command + "' removed");
+        if (commands.isEmpty()) {
+            throw new NoSuchElementException("No commands to remove");
         }
+        String command = commands.removeLast();
+        System.out.println("'" + command + "' removed");
     }
 
     public String getCommandsHistory() {

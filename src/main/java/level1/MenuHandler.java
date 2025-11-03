@@ -2,6 +2,8 @@ package level1;
 
 import input.InputHandler;
 
+import java.util.NoSuchElementException;
+
 public class MenuHandler {
 
     public void start() {
@@ -30,11 +32,19 @@ public class MenuHandler {
     private void handleOption(int option) {
         switch (option) {
             case 1:
-                String command = InputHandler.readString("Enter the command");
-                Undo.getInstance().addCommand(command);
+                try {
+                    String command = InputHandler.readString("Enter the command");
+                    Undo.getInstance().addCommand(command);
+                } catch (Exception e) {
+                    System.out.println("Error adding command: " + e.getMessage());
+                }
                 break;
             case 2:
-                Undo.getInstance().removeCommand();
+                try {
+                    Undo.getInstance().removeCommand();
+                } catch (Exception e) {
+                    System.out.println("Error removing command: " + e.getMessage());
+                }
                 break;
             case 3:
                 System.out.println(Undo.getInstance().getCommandsHistory());
