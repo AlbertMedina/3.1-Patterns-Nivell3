@@ -34,7 +34,7 @@ public class Undo {
         }
     }
 
-    public String getCommandsList() {
+    public String getCommandsHistory() {
         StringBuilder sb = new StringBuilder("Commands history:");
         commands.forEach(c -> sb.append("\n").append("- ").append(c));
         return sb.toString();
