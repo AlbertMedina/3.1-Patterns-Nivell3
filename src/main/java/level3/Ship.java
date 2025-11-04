@@ -1,6 +1,6 @@
 package level3;
 
-public class Ship extends Vehicle {
+public class Ship implements Vehicle {
 
     @Override
     public void start() {

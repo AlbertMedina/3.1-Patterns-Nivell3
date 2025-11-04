@@ -1,6 +1,6 @@
 package level3;
 
-public class Plane extends Vehicle {
+public class Plane implements Vehicle {
 
     @Override
     public void start() {

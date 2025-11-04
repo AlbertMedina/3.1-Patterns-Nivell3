@@ -1,10 +1,10 @@
 package level3;
 
-public abstract class Vehicle {
-    
-    public abstract void start();
+public interface Vehicle {
 
-    public abstract void accelerate();
+    void start();
 
-    public abstract void brake();
+    void accelerate();
+
+    void brake();
 }
