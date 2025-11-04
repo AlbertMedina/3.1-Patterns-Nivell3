@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class ContactsRepository {
 
-    private List<Contact> contacts;
+    private final List<Contact> contacts;
 
     public ContactsRepository() {
         contacts = new ArrayList<>();
