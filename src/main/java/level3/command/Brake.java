@@ -1,4 +1,6 @@
-package level3;
+package level3.command;
+
+import level3.vehicles.Vehicle;
 
 public class Brake implements Order {
 

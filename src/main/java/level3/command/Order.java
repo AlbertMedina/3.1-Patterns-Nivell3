@@ -1,4 +1,4 @@
-package level3;
+package level3.command;
 
 public interface Order {
     void execute();
