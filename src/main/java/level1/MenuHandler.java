@@ -2,8 +2,6 @@ package level1;
 
 import input.InputHandler;
 
-import java.util.NoSuchElementException;
-
 public class MenuHandler {
 
     public void start() {
