@@ -21,6 +21,10 @@ public class Undo {
         return instance;
     }
 
+    public List<String> getCommands() {
+        return List.copyOf(commands);
+    }
+
     public void addCommand(String command) {
         if (command == null || command.trim().isEmpty()) {
             throw new IllegalArgumentException("Invalid command");
